@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professor Carlos Lima — Homenagem aos Professores</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 34 L14 58 L24 54 L30 60 L36 40" fill="currentColor" stroke="none" opacity="0.85"/>
+        <path d="M42 34 L50 58 L40 54 L34 60 L28 40" fill="currentColor" stroke="none" opacity="0.85"/>
+        <circle cx="32" cy="26" r="18"/>
+        <path d="M32 16 L35 23 L42 24 L37 29 L38 36 L32 32 L26 36 L27 29 L22 24 L29 23 Z" fill="currentColor" stroke="none"/>
+      </svg>
+      Homenagem aos Professores
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="professores.html" class="active">Professores</a></li>
+      <li><a href="mural.html">Mural</a></li>
+      <li><a href="recados.html">Recados</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="wrap" style="padding-top:24px;">
+  <a class="back-link" href="professores.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    Voltar para os professores
+  </a>
+</div>
+
+<div class="wrap detail-header">
+  <div class="locket locket-detail"><div class="locket-inner"><img src="fotos/carlos-perfil.jpg" alt="Foto do professor ou da professora"></div></div>
+  <div class="detail-info">
+    <h1>Professor Carlos Lima</h1>
+    <span class="subject">História</span>
+    <p class="detail-bio" contenteditable="true">Clique aqui para escrever uma pequena biografia ou lembrança sobre o professor Carlos — há quanto tempo ele leciona, o que ele tornou mais fácil de entender, uma frase marcante que ele sempre repete.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" style="text-align:left;">
+      <h2 style="font-size:1.6rem;">Fotos com o professor Carlos</h2>
+    </div>
+    <div class="frame-grid">
+      <div class="frame">
+        <div class="ribbon-tag"></div>
+        <div class="photo-area"><img src="fotos/carlos-1.jpg" alt="Foto com o professor ou professora"></div>
+        <input type="text" class="caption" placeholder="Legenda da foto...">
+      </div>
+      <div class="frame">
+        <div class="ribbon-tag"></div>
+        <div class="photo-area"><img src="fotos/carlos-2.jpg" alt="Foto com o professor ou professora"></div>
+        <input type="text" class="caption" placeholder="Legenda da foto...">
+      </div>
+      <div class="frame">
+        <div class="ribbon-tag"></div>
+        <div class="photo-area"><img src="fotos/carlos-3.jpg" alt="Foto com o professor ou professora"></div>
+        <input type="text" class="caption" placeholder="Legenda da foto...">
+      </div>
+          <div class="more-card" tabindex="0">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg>
+        <span>Ver mais fotos</span>
+      </div>
+      <div class="frame extra hidden">
+        <div class="ribbon-tag"></div>
+        <div class="photo-area"><img src="fotos/carlos-4.jpg" alt="Foto com o professor ou professora"></div>
+        <input type="text" class="caption" placeholder="Legenda da foto...">
+      </div>
+      <div class="frame extra hidden">
+        <div class="ribbon-tag"></div>
+        <div class="photo-area"><img src="fotos/carlos-5.jpg" alt="Foto com o professor ou professora"></div>
+        <input type="text" class="caption" placeholder="Legenda da foto...">
+      </div>
+      <div class="frame extra hidden">
+        <div class="ribbon-tag"></div>
+        <div class="photo-area"><img src="fotos/carlos-6.jpg" alt="Foto com o professor ou professora"></div>
+        <input type="text" class="caption" placeholder="Legenda da foto...">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tinted">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Homenagens ao professor Carlos</h2>
+    </div>
+    <div class="notes-grid" id="notesCarlos">
+      <div class="note">&ldquo;Suas histórias faziam a gente esquecer que era só mais uma aula.&rdquo;<span class="from">— um aluno grato</span></div>
+      <div class="note">&ldquo;Suas aulas pareciam viagens no tempo, não decoreba de datas.&rdquo;<span class="from">— turma da tarde</span></div>
+    </div>
+    <form class="note-form" data-target-grid="notesCarlos">
+      <h3>Deixe uma homenagem</h3>
+      <p class="hint">Sua mensagem aparece direto acima, só para o professor Carlos.</p>
+      <label>Mensagem</label>
+      <textarea placeholder="Escreva sua homenagem..." required></textarea>
+      <label>Assinatura (opcional)</label>
+      <input type="text" placeholder="Ex.: turma de 2024, um ex-aluno...">
+      <button type="submit">Publicar homenagem</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <strong>Feliz Dia dos Professores</strong>
+    Feito com carinho por quem teve a sorte de ser aluno de vocês.
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

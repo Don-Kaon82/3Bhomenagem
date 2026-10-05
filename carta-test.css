@@ -1,0 +1,26 @@
+.carta-teste-section { background: var(--ivory); }
+.carta-teste-note { max-width: 520px; margin: 0 auto 26px; color: #4C5546; text-align: center; }
+.carta-teste-grid { display: grid; grid-template-columns: minmax(0, 340px); justify-content: center; }
+.carta-teste {
+  --paper: #FFFDF7; --envelope: #DCE8DF; --flap: #EEF4ED; --line: #1B4332;
+  position: relative; width: 100%; padding: 0; border: 0; background: transparent; cursor: pointer;
+}
+.carta-teste:focus-visible { outline: 3px solid var(--gold); outline-offset: 7px; }
+.carta-teste .envelope { position: relative; display: block; aspect-ratio: 1.5; }
+.carta-teste .envelope-back,
+.carta-teste .envelope-front,
+.carta-teste .envelope-flap,
+.carta-teste .papel { position: absolute; inset: 0; }
+.carta-teste .envelope-back { background: #C6D8C9; border: 2px solid var(--line); border-radius: 4px; }
+.carta-teste .papel { inset: 9% 12%; z-index: 2; padding: 16px; background: var(--paper); border: 1px solid var(--gold-soft); text-align: left; opacity: 0; transform: translateY(8%); transition: opacity .25s ease, transform .4s ease; }
+.carta-teste .papel strong { display: block; margin-bottom: 7px; font: 600 1.2rem/1.1 'Cormorant Garamond', serif; color: var(--emerald-deep); }
+.carta-teste .papel span { display: block; font-size: .95rem; line-height: 1.35; color: #4C5546; }
+.carta-teste .envelope-front { z-index: 3; overflow: visible; }
+.carta-teste .envelope-front path { fill: var(--envelope); stroke: var(--line); stroke-width: 2.5; stroke-linejoin: round; }
+.carta-teste .envelope-flap { z-index: 4; transform-origin: center top; transition: transform .45s ease; }
+.carta-teste .envelope-flap path { fill: var(--flap); stroke: var(--line); stroke-width: 2.5; stroke-linejoin: round; }
+.carta-teste:hover .papel, .carta-teste:focus-visible .papel, .carta-teste.aberta .papel { opacity: 1; transform: translateY(-34%); }
+.carta-teste:hover .envelope-flap, .carta-teste:focus-visible .envelope-flap, .carta-teste.aberta .envelope-flap { transform: scaleY(-1); }
+.carta-teste.aberta { --envelope: #DCE8DF; --flap: #EEF4ED; }
+.carta-teste.aberta::after { content: '✓'; position: absolute; right: 12px; bottom: 10px; z-index: 5; display: grid; place-items: center; width: 28px; height: 28px; border: 2px solid var(--emerald); border-radius: 50%; color: var(--emerald); background: var(--paper); font-weight: 700; }
+@media (max-width: 600px) { .carta-teste-grid { grid-template-columns: minmax(0, 1fr); } }
